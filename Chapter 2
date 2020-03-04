@@ -62,8 +62,73 @@ Chapter 2 Be a Keyboard man
   print (type(var_integer))   # <class 'int'>
   --------------------------------------------
  
-      3. Sequence 
-   
+      3. Sequence 序列
+  容器收纳多个数据
+      element 元素  
+      
+      Two types: Tuple 元组/“定值表”  List 列表
+      
+      create a Tuple:
+  -------------------------------------------- 
+ >>>example_tuple = (2, 1.3, "love", 5.6, 9, 12, False)  # one Tuple
+ >>>example_list = [True, 5,"smile"]      # one list
+ 
+ >>>type(example_tuple)         # tuple
+ >>>type(example_list)          # list
+  --------------------------------------------
   
+  element could be a list
+ --------------------------------------------
+ >>> nest_list = [1,[3,4,5]]   # list in a list
   
-  
+  tuple cannot edit data, but list can. Create a null list:
+ --------------------------------------------
+ >>> empty_list = []     # null list
+ --------------------------------------------
+ 
+ find the element in list:  Index 位置索引称为下标
+ start from 0
+ 
+ -------------------------------------------- 
+ >>>example_tuple = (2, 1.3, "love", 5.6, 9, 12, False)  # one Tuple
+ >>>example_list = [True, 5,"smile"]      # one list
+ >>> nest_list = [1,[3,4,5]]
+ 
+ >>>example_tuple [0]  #2
+ >>>example_list [2]  # 'smile'
+ >>>nest_list [1][2]  
+ --------------------------------------------
+ 
+ change the element in list
+ -------------------------------------------- 
+ >>> example_list [1] = 3.0
+ --------------------------------------------
+ 
+ find list element in range
+ name[lowerboundary:upperboundary:length] 序列名[下限:上限:步长]
+---------------------------------------------------------------- 
+>>>example_tuple[:5] # 从小标0到下标4， 不包括下标5的元素
+>>>example_tuple[2:] # 从下标2到最后一个元素
+>>>example_tuple[0:5:2] #下标为0， 2， 4的元素。
+>>>sliced = example_tuple[2:0:-1] # 从下标2到下标1
+>>>type(sliced) # 范围引用的结果还是一个元组
+---------------------------------------------------------------
+
+another way:
+-----------------------------------------------------------------
+>>>example_tuple[-1] # 序列最后一个元素
+>>>example_tuple[-3] # 序列倒数第三个元素
+>>>example_tuple[1:-1] # 序列的第二个到倒数第二个元素
+----------------------------------------------------------------
+
+example_tuple[1:-1]， 如果是范围引用range quote， 那么上限元素
+将不包含在结果中 upper bound not in the result 
+
+ 4. Dictionary 词典
+词典不是以位置来作为索引的。 词典允许用自定义的方式来建立数据的索引
+DIY to find element in dictionary 
+
+---------------------------------------------------------------
+>>>example_dict = {"tom":11, "sam":57,"lily":100}
+>>>type(example_dict) # 结果为'dict
+
